@@ -87,7 +87,7 @@ button:hover {
 
 #error-message {
   margin-top: 50px;
-  color: red;
+  color:whitesmoke;
   font-weight: bold;
 }
 
@@ -98,7 +98,7 @@ button:hover {
   max-height: 70px;
   border-radius: 50%;
   padding: 8px;
-  background-color: rgb(195, 162, 162); /* subtle glow base */
+  background-color: whitesmoke; /* subtle glow base */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3),
     /* base shadow */ 0 0 15px rgba(0, 123, 255, 0.4),
     /* outer glow */ 0 0 25px rgba(0, 123, 255, 0.3); /* extended soft glow */
