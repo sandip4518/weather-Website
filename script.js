@@ -36,9 +36,8 @@ $("#weather-form").on("submit", function (e) {
       $("#weather-result").html(`
           <h2>Weather in ${data.name}, ${data.sys.country}</h2>
           <img src="${iconUrl}" alt="${desc}">
-          <h4>Timezone: ${data.timezone / 3600} hours</h4>
-          <h4>Coordinates: ${data.coord.lat}°N, ${data.coord.lon}°E</h4>
           <p>Temperature: ${temp}°C</p>
+          <p>Feels Like: ${data.main.feels_like}°C</p>
           <p>Discription: ${desc}</p>
           <p>Humidity: ${humidity}%</p>
           <p>Wind Speed: ${windSpeed}m/s</p>
@@ -48,7 +47,9 @@ $("#weather-form").on("submit", function (e) {
           <p>Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
           <p>Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
           <p>Cloudiness: ${data.clouds.all}%</p>
-          <p>Feels Like: ${data.main.feels_like}°C</p>
+          <h4>Timezone: ${data.timezone / 3600} hours</h4>
+          <h4>Coordinates: ${data.coord.lat}°N, ${data.coord.lon}°E</h4>
+          
         `);
     },
     error: function () {
