@@ -65,7 +65,7 @@ button:hover {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  color: #0a3d62;
+  color:whitesmoke;
   background: linear-gradient(135deg, #e3f2fd, #d0d7b4);
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
@@ -77,6 +77,8 @@ button:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
+  background-image: url(./image/back.png);
+  background-size: cover;
 }
 #weather-result:hover {
   transform: scale(1.02);
@@ -96,7 +98,7 @@ button:hover {
   max-height: 70px;
   border-radius: 50%;
   padding: 8px;
-  background-color: rgba(255, 255, 255, 0.05); /* subtle glow base */
+  background-color: rgb(195, 162, 162); /* subtle glow base */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3),
     /* base shadow */ 0 0 15px rgba(0, 123, 255, 0.4),
     /* outer glow */ 0 0 25px rgba(0, 123, 255, 0.3); /* extended soft glow */

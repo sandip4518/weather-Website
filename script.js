@@ -30,8 +30,6 @@ $("#weather-form").on("submit", function (e) {
       const pressure = data.main.pressure;
       const visibility = data.visibility;
       const iconUrl = `https://openweathermap.org/img/wn/${icon}@4x.png`;
-      
-      
 
       $("#weather-result").html(`
           <h2>Weather in ${data.name}, ${data.sys.country}</h2>
@@ -43,19 +41,22 @@ $("#weather-form").on("submit", function (e) {
           <p>Wind Speed: ${windSpeed}m/s</p>
           <p>Pressure: ${pressure}hPa</p>
           <p>Visibility: ${visibility}m</p>
-          <p>Last updated: ${new Date(data.dt * 1000).toLocaleString()}</p>
-          <p>Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
-          <p>Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+          <p>Sunrise: ${new Date(
+            data.sys.sunrise * 1000
+          ).toLocaleTimeString()}</p>
+          <p>Sunset: ${new Date(
+            data.sys.sunset * 1000
+          ).toLocaleTimeString()}</p>
           <p>Cloudiness: ${data.clouds.all}%</p>
           <h4>Timezone: ${data.timezone / 3600} hours</h4>
           <h4>Coordinates: ${data.coord.lat}°N, ${data.coord.lon}°E</h4>
-          
+          <p>Last updated: ${new Date(data.dt * 1000).toLocaleString()}</p>
         `);
     },
     error: function () {
       $("#weather-result").hide();
       $("#error-message").text(
-        "Could not find weather for the city. Please try again."
+        "Could not find weather for the city or Check your internet connection."
       );
     },
   });
