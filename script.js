@@ -2,11 +2,11 @@ $(document).ready(function () {
   // 🌍 API Keys
   const weatherApiKey = "4592b95a03040677d681bcb471f96f27";
   const geoApiKey = "84e64b7a98msh318d5e263962d10p156893jsn87294f42e0a7"; 
-  
+
   // 🔍 City Autocomplete
   $("#city").on("input", function () {
     const query = $(this).val().trim();
-    if (query.length < 2) {
+    if (query.length < 3) {
       $("#suggestions").empty();
       return;
     }
